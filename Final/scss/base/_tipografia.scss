@@ -1,0 +1,30 @@
+@use '../utilities/variables' as *;
+
+body {
+  font-family: $font-family-base;
+}
+
+main {
+  h1 {
+    color: $color-accent;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    color: #ffffff;
+    border-left: 4px solid $color-accent;
+    padding-left: 10px;
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    color: $color-text-light;
+    font-style: italic;
+  }
+
+  p {
+    color: $color-text-muted;
+    font-size: 1rem;
+  }
+}

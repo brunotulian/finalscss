@@ -1,0 +1,46 @@
+@use '../utilities/variables' as *;
+
+nav {
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 12px;
+    background-color: $bg-nav-link;
+    border-radius: 4px;
+    transition: background-color 300ms ease-out, color 300ms ease-out;
+
+    &:hover {
+      background-color: $color-accent;
+      color: $bg-dark !important;
+    }
+  }
+}
+
+.navbar-nav {
+  .nav-link, .btn, .card, .salon-card {
+    transition: transform 300ms ease-out, color 300ms ease-out, background-color 300ms ease-out, box-shadow 300ms ease-out;
+  }
+
+  .nav-link {
+    &:hover, &:focus {
+      color: $color-accent;
+      color: $bg-dark !important;
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: translateY(0);
+      color: $color-accent-hover;
+    }
+  }
+}

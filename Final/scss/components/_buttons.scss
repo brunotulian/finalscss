@@ -1,0 +1,5 @@
+@use '../utilities/variables' as *;
+
+.btn {
+  transition: transform 300ms ease-out, color 300ms ease-out, background-color 300ms ease-out, box-shadow 300ms ease-out;
+}

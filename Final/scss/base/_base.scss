@@ -1,0 +1,25 @@
+@use '../utilities/variables' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bg-dark;
+  color: $color-text;
+  line-height: 1.6;
+}
+
+img.main-img, .header-logo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}

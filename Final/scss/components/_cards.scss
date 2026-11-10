@@ -1,0 +1,60 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+.index-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+      "hero"
+      "salones"
+      "cafe";
+
+  .sec-hero { grid-area: hero; }
+  .sec-salones { grid-area: salones; }
+  .sec-cafe { grid-area: cafe; }
+
+  section {
+    background-color: $bg-card;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid $color-accent;
+    transition: transform 300ms ease-out, box-shadow 300ms ease-out;
+
+    &:hover {
+      transform: scale(1.01);
+      box-shadow: 0 4px 15px rgba($color-accent, 0.15);
+    }
+  }
+}
+
+.salon-card {
+  @include hover-effect;
+}
+
+.salones-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+
+.salones-header {
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .index-grid {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+        "hero hero"
+        "salones cafe";
+  }
+
+  .salones-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .salones-header {
+    grid-column: 1 / -1;
+  }
+}

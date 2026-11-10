@@ -1,0 +1,74 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+header {
+  background-color: $bg-header;
+  border-bottom: 3px solid $color-accent;
+  padding: 10px 20px;
+
+  .header-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .header-logo {
+    width: 50px;
+    animation: batsignal 3s infinite ease-in-out;
+  }
+
+  h1 {
+    color: $color-accent;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  h2 {
+    color: $color-subtext;
+    font-size: 0.95rem;
+    font-weight: 400;
+  }
+}
+
+.navbar-brand {
+  span {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    color: $color-accent;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0;
+  }
+
+  h2 {
+    color: $color-subtext;
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin: 0;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: $bg-header !important;
+    padding: 15px !important;
+    margin-top: 10px !important;
+    border-radius: 6px !important;
+    border: 1px solid $border-navbar !important;
+  }
+  
+  .navbar-nav {
+    align-items: stretch !important;
+    width: 100%;
+
+    .nav-link {
+      text-align: center !important;
+      padding: 10px !important;
+    }
+  }
+}

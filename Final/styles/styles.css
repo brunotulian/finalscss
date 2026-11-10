@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;  
+    line-height: 1.6;
+}
+
+img.main-img, .header-logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+header {
+    background-color: #1a1a1a;
+    border-bottom: 3px solid #ffcc00;
+    padding: 10px 20px;   
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-logo {
+    width: 50px;
+    animation: batsignal 3s infinite ease-in-out;
+}
+
+@keyframes batsignal {
+    0% {
+        transform: scale(1);
+        opacity: 0.85;
+    }
+    50% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.85;
+    }
+}
+
+.navbar-brand span {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-brand h1 {
+    color: #ffcc00 ;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0;
+}
+
+.navbar-brand h2 {
+    color: #aaaaaa ;
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.navbar-nav .nav-link, .btn, .card, .salon-card {
+    transition: transform 300ms ease-out, color 300ms ease-out, background-color 300ms ease-out, box-shadow 300ms ease-out;
+}
+
+.navbar-nav .nav-link:hover, 
+.navbar-nav .nav-link:focus {
+    color: #ffcc00 ;
+    color: #121212 !important;
+    transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link:active {
+    transform: translateY(0);
+    color: #e0a800 ;
+}
+
+header h1 {
+    color: #ffcc00;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+header h2 {
+    color: #aaaaaa;
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;              
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;         
+    gap: 15px;     
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 12px;
+    background-color: #262626;
+    border-radius: 4px;
+    transition: background-color 300ms ease-out, color 300ms ease-out;
+}
+
+nav a:hover {
+    background-color: #ffcc00;
+    color: #121212 !important;
+}
+
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;             
+}
+
+.index-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "hero"
+        "salones"
+        "cafe";
+}
+
+.sec-hero { grid-area: hero; }
+.sec-salones { grid-area: salones; }
+.sec-cafe { grid-area: cafe; }
+
+.index-grid section {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #ffcc00;
+    transition: transform 300ms ease-out, box-shadow 300ms ease-out;
+}
+
+.salon-card:hover, .index-grid section:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.15);
+}
+
+.salones-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+}
+
+.salones-header {
+    text-align: center;
+}
+
+main h1 {
+    color: #ffcc00;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+main h2 {
+    color: #ffffff;
+    border-left: 4px solid #ffcc00;
+    padding-left: 10px;
+    font-size: 1.3rem;
+}
+
+main h3 {
+    color: #cccccc;
+    font-style: italic;
+}
+
+main p {
+    color: #d1d1d1;
+    font-size: 1rem;
+}
+
+footer {
+    background-color: #0a0a0a;
+    color: #888888;
+    padding: 25px 20px;    
+    margin-top: 40px;   
+    border-top: 1px solid #222222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    gap: 8px;  
+}
+
+@media (min-width: 1024px) {
+
+    .index-grid {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: 
+            "hero hero"
+            "salones cafe";
+    }
+    .salones-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .salones-header {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: #1a1a1a !important; 
+        padding: 15px !important;
+        margin-top: 10px !important;
+        border-radius: 6px !important;
+        border: 1px solid #333333 !important;
+    }
+    
+    .navbar-nav {
+        align-items: stretch !important; 
+        width: 100%;
+    }
+
+    .navbar-nav .nav-link {
+        text-align: center !important;
+        padding: 10px !important;
+    }
+}
